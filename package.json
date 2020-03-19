@@ -10,6 +10,13 @@
     "email": "info@zyndaa.com"
   },
   "homepage": "https://zyndaa.com/products/restyaboard-vs-code-extension",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zyndaateam/vscode-restyaboard-viewer"
+  },
+  "bugs": {
+    "url": "https://github.com/zyndaateam/vscode-restyaboard-viewer/issues"
+  },
   "engines": {
     "vscode": "^1.28.0"
   },
