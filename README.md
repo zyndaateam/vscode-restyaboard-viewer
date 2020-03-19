@@ -30,7 +30,7 @@ Welcome to Restyaboard Viewer for VS Code! This extension provides the following
 
 ## Restyaboard Card Markdown Preview
 
-<img src="https://raw.githubusercontent.com/Ho-Wan/vscode-trello-viewer/master/images/readme/screenshot1v2-markdown-preview.png" alt="Restyaboard Viewer markdown preview">
+
 
 ## Useful Commands
 
