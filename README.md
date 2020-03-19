@@ -16,7 +16,7 @@ Welcome to Restyaboard Viewer for VS Code! This extension provides the following
 
 ## Tree View
 
-<img src="https://raw.githubusercontent.com/Ho-Wan/vscode-trello-viewer/master/images/readme/main-tree-view-markup.png" alt="Restyaboard Viewer tree view markup">
+
 
 ## Usage
 
