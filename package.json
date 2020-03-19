@@ -1,0 +1,302 @@
+{
+  "name": "vscode-restyaboard-viewer",
+  "displayName": "Restyaboard Viewer",
+  "description": "View, add, edit Restyaboard cards in VS Code.",
+  "version": "0.0.1",
+  "publisher": "Zyndaa",
+  "author": {
+    "name": "Zyndaa",
+    "url": "https://zyndaa.com",
+    "email": "info@zyndaa.com"
+  },
+  "homepage": "https://zyndaa.com/products/restyaboard-vs-code-extension",
+  "engines": {
+    "vscode": "^1.28.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "restyaboard",
+    "restya",
+    "markdown",
+    "kanban",
+    "todo",
+    "card"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension",
+  "icon": "images/restyaboard-viewer-icon.png",
+  "contributes": {
+    "commands": [
+      {
+        "command": "restyaboardViewer.authenticate",
+        "title": "Authenticate",
+        "category": "Restyaboard Viewer",
+        "icon": {
+          "light": "images/light/key.svg",
+          "dark": "images/dark/key.svg"
+        }
+      },
+      {
+        "command": "restyaboardViewer.setCredentials",
+        "title": "Set Credentials",
+        "category": "Restyaboard Viewer"
+      },
+      {
+        "command": "restyaboardViewer.resetCredentials",
+        "title": "Reset Credentials",
+        "category": "Restyaboard Viewer",
+        "icon": {
+          "light": "images/light/x.svg",
+          "dark": "images/dark/x.svg"
+        }
+      },
+      {
+        "command": "restyaboardViewer.showRestyaboardInfo",
+        "title": "Show Saved Credentials",
+        "category": "Restyaboard Viewer",
+        "icon": {
+          "light": "images/light/eye.svg",
+          "dark": "images/dark/eye.svg"
+        }
+      },
+      {
+        "command": "restyaboardViewer.refresh",
+        "title": "Refresh",
+        "category": "Restyaboard Viewer",
+        "icon": {
+          "light": "images/light/sync.svg",
+          "dark": "images/dark/sync.svg"
+        }
+      },
+      {
+        "command": "restyaboardViewer.addCard",
+        "title": "Add Card",
+        "category": "Restyaboard Viewer List Action",
+        "icon": {
+          "light": "images/light/plus.svg",
+          "dark": "images/dark/plus.svg"
+        }
+      },
+      {
+        "command": "restyaboardViewer.addComment",
+        "title": "Add comment to card",
+        "category": "Restyaboard Viewer Card Action"
+      },
+      {
+        "command": "restyaboardViewer.editCardTitle",
+        "title": "Edit title of card",
+        "category": "Restyaboard Viewer Card Action"
+      },
+      {
+        "command": "restyaboardViewer.editCardDescription",
+        "title": "Edit description of card",
+        "category": "Restyaboard Viewer Card Action"
+      },
+      {
+        "command": "restyaboardViewer.moveCardToList",
+        "title": "Move card to list",
+        "category": "Restyaboard Viewer Card Action"
+      },
+      {
+        "command": "restyaboardViewer.addSelfToCard",
+        "title": "Add self to card",
+        "category": "Restyaboard Viewer Card Action"
+      },
+      {
+        "command": "restyaboardViewer.removeSelfFromCard",
+        "title": "Remove self from card",
+        "category": "Restyaboard Viewer Card Action"
+      },
+      {
+        "command": "restyaboardViewer.addUserToCard",
+        "title": "Add user to card",
+        "category": "Restyaboard Viewer Card Action"
+      },
+      {
+        "command": "restyaboardViewer.removeUserFromCard",
+        "title": "Remove user from card",
+        "category": "Restyaboard Viewer Card Action"
+      },
+      {
+        "command": "restyaboardViewer.archiveCard",
+        "title": "Archive Card",
+        "category": "Restyaboard Viewer Card Action"
+      }
+    ],
+    "configuration": {
+      "title": "Restyaboard Viewer",
+      "properties": {
+        "restyaboardViewer.viewColumn": {
+          "type": "integer",
+          "default": 2,
+          "description": "Specifies which editor column markdown previewer opens at.\n-1 = Active, -2 = Beside, 1 = One, 2 = Two, etc.",
+          "scope": "resource"
+        },
+        "restyaboardViewer.starredBoardsOnly": {
+          "type": "boolean",
+          "default": false,
+          "description": "Controls whether to display starred boards only or all boards.",
+          "scope": "resource"
+        }
+      }
+    },
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "restyaboardViewer.addCard",
+          "when": "false"
+        },
+        {
+          "command": "restyaboardViewer.addComment",
+          "when": "false"
+        },
+        {
+          "command": "restyaboardViewer.addSelfToCard",
+          "when": "false"
+        },
+        {
+          "command": "restyaboardViewer.removeSelfFromCard",
+          "when": "false"
+        },
+        {
+          "command": "restyaboardViewer.addUserToCard",
+          "when": "false"
+        },
+        {
+          "command": "restyaboardViewer.removeUserFromCard",
+          "when": "false"
+        },
+        {
+          "command": "restyaboardViewer.editCardTitle",
+          "when": "false"
+        },
+        {
+          "command": "restyaboardViewer.editCardDescription",
+          "when": "false"
+        },
+        {
+          "command": "restyaboardViewer.moveCardToList",
+          "when": "false"
+        },
+        {
+          "command": "restyaboardViewer.archiveCard",
+          "when": "false"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "restyaboardViewer.authenticate",
+          "when": "view == restyaboardTreeView",
+          "group": "navigation@1"
+        },
+        {
+          "command": "restyaboardViewer.resetCredentials",
+          "when": "view == restyaboardTreeView",
+          "group": "navigation@2"
+        },
+        {
+          "command": "restyaboardViewer.showRestyaboardInfo",
+          "when": "view == restyaboardTreeView",
+          "group": "navigation@3"
+        },
+        {
+          "command": "restyaboardViewer.refresh",
+          "when": "view == restyaboardTreeView",
+          "group": "navigation@4"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "restyaboardViewer.addCard",
+          "when": "viewItem == list",
+          "group": "inline@1"
+        },
+        {
+          "command": "restyaboardViewer.editCardTitle",
+          "when": "viewItem == card",
+          "group": "1edit@1"
+        },
+        {
+          "command": "restyaboardViewer.editCardDescription",
+          "when": "viewItem == card",
+          "group": "1edit@2"
+        },
+        {
+          "command": "restyaboardViewer.addComment",
+          "when": "viewItem == card",
+          "group": "1edit@3"
+        },
+        {
+          "command": "restyaboardViewer.addSelfToCard",
+          "when": "viewItem == card",
+          "group": "2user@1"
+        },
+        {
+          "command": "restyaboardViewer.removeSelfFromCard",
+          "when": "viewItem == card",
+          "group": "2user@2"
+        },
+        {
+          "command": "restyaboardViewer.addUserToCard",
+          "when": "viewItem == card",
+          "group": "2user@3"
+        },
+        {
+          "command": "restyaboardViewer.removeUserFromCard",
+          "when": "viewItem == card",
+          "group": "2user@4"
+        },
+        {
+          "command": "restyaboardViewer.moveCardToList",
+          "when": "viewItem == card",
+          "group": "3card@1"
+        },
+        {
+          "command": "restyaboardViewer.archiveCard",
+          "when": "viewItem == card",
+          "group": "3card@2"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "restyaboardViewer",
+          "title": "Restyaboard Viewer",
+          "icon": "images/restyaboard-viewer-activity-bar.svg"
+        }
+      ]
+    },
+    "views": {
+      "restyaboardViewer": [
+        {
+          "id": "restyaboardTreeView",
+          "name": "Restyaboard"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test"
+  },
+  "dependencies": {
+    "axios": "^0.18.1"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.42",
+    "@types/node": "^8.10.25",
+    "@types/sinon": "^7.0.2",
+    "sinon": "^7.2.2",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.1",
+    "vscode": "^1.1.36"
+  }
+}
