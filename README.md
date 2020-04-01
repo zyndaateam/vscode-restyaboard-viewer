@@ -2,16 +2,22 @@
 
 Welcome to Restyaboard Viewer for VS Code! This extension provides the following features:
 
-- Browse Restyaboard boards, lists and cards in the side bar.
+- Browse Restyaboard boards, lists and cards in the sidebar.
 - View selected card using the markdown previewer and open to the side.
 - See formatted checklists and cover image for the card.
 - Saves credentials to use between sessions.
 
-## Authenication
+# What is Restyaboard?
+
+Restyaboard is an [awesome open-source alternative for Trello](http://restya.com/).
+
+It is a very good option to protect data and privacy, especially in the corporate and development environment. When compared to Trello kanban board, it has many valuable additional features. Refer to [Trello Vs Restyaboard comparison](https://restya.com/board/trello-alternative-free-open-source) for more details.
+
+## Authentication
 
 - Activate extension by clicking on the icon in the left Activity Bar.
 - Set credentials by clicking the key icon in the left Side Bar or running command "Restyaboard Viewer: Authenticate".
-- After entering API key, a new page should open in browser to get an API token.
+- After entering the API key, a new page should open in the browser to get an API token.
 - Alternatively, use the command "Restyaboard Viewer: Set Credentials" and follow instructions from Restyaboard to manually generate a token.
 
 ## Tree View
@@ -20,13 +26,13 @@ Welcome to Restyaboard Viewer for VS Code! This extension provides the following
 
 ## Usage
 
-- Restyaboard boards, lists, and cards appears in left Side Bar.
-- Clicking a board or list expands or collapses object.
+- Restyaboard boards, lists, and cards appear in the left SideBar.
+- Clicking a board or list expands or collapses objects.
 - Clicking a card opens the markdown file as well as the previewer, opening this to the right side (editor column 2 by default).
-- Clicking on the 'star' icon to the right of a list assigns this as your "favourite list", shown in the lower part of the side bar.
-- Clicking on the icons in the side bar runs various commands, such as setting credentials, removing credentials, showing saved info, and refreshing views.
+- Clicking on the 'star' icon to the right of a list assigns this as your "favourite list", shown in the lower part of the sidebar.
+- Clicking on the icons in the sidebar runs various commands, such as setting credentials, removing credentials, showing saved info, and refreshing views.
 - Click the 'plus' icon to add a card to the selected list.
-- Right click on a card to see options for card, such as assigning a user, editing the title or description, and archive card.
+- Right-click on a card to see options for cards, such as assigning a user, editing the title or description, and archive card.
 
 ## Restyaboard Card Markdown Preview
 
@@ -34,7 +40,7 @@ Welcome to Restyaboard Viewer for VS Code! This extension provides the following
 
 ## Useful Commands
 
-Main functionality is provided using the VS code interface in the left Side Bar. Running commands to use this extension is optional.
+The main functionality is provided using the VS code interface in the Left Side Bar. Running commands to use this extension is optional.
 
 Command | Description
 --- | ---
