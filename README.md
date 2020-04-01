@@ -9,9 +9,9 @@ Welcome to Restyaboard Viewer for VS Code! This extension provides the following
 
 # What is Restyaboard?
 
-Restyaboard is an [awesome open-source alternative for Trello](http://restya.com/).
+Restyaboard is an [awesome open-source alternative for Trello](http://restya.com/board).
 
-It is a very good option to protect data and privacy, especially in the corporate and development environment. When compared to Trello kanban board, it has many valuable additional features. Refer to [Trello Vs Restyaboard comparison](https://restya.com/board/trello-alternative-free-open-source) for more details.
+It is a very good option to protect data and privacy, especially in the corporate and development environment. When compared to Trello kanban board, it has many valuable additional features. Refer to [Trello Vs Restyaboard comparison](https://restya.com/board/comparisons/trello-vs-restyaboard) for more details.
 
 ## Authentication
 
